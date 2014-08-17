@@ -1,0 +1,14 @@
+<ion-view title="Input">
+  <ion-content class="has-header padding">
+    <div class="list list-inset">
+	    <label class="item item-input">
+	    	<input type="text" placeholder="Text to read..." ng-model="text">
+	    </label>
+    </div>
+    <p style="text-align:center;">{{speed}} words per minute</p>
+    <div class="range">
+    	<input type="range" name="speed" min="1" max="1000" value="500" ng-model="speed">
+    </div>
+    	<a href='#/tab/read' class="button button-full button-positive" ng-click="readStart(text, speed)">Read</a>
+  </ion-content>
+</ion-view>
