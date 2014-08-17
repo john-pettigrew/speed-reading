@@ -25,13 +25,12 @@ angular.module('starter.controllers', [])
 		console.log($scope.words);
 	}
 	var changeWord = function(){
-		console.log('changeWord');
-		$scope.currentWord = $scope.words[nextWordInt];
-		nextWordInt++;
 		if(nextWordInt >= $scope.words.length){
 			$interval.cancel(promise);
 			$scope.currentWord = '';
 		}
+		$scope.currentWord = $scope.words[nextWordInt];
+		nextWordInt++;
 	}
 	$scope.$on('$destroy', function(){
 		$interval.cancel(promise);
